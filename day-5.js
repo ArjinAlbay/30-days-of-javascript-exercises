@@ -177,6 +177,7 @@ let countries = [
   "Ireland",
   "Japan",
   "Kenya",
+  `Turkey`,
 ];
 
 let find = countries.indexOf(`Ethiopia`);
@@ -212,7 +213,7 @@ if (look1 == true) {
 
 let frontEnd = ["HTML", "CSS", "JS", "React", "Redux"];
 
-let backEnd = ["Node", "Express", "MongoDB"];
+let backEnd = ["Node", "ExprEss", "MongoDB"];
 
 let fullStack = frontEnd.concat(backEnd);
 
@@ -228,19 +229,61 @@ let ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
 
 ages.sort();
 
-console.log(ages.length); // 10
+let ages1 = Math.min(...ages);
+let ages2 = Math.max(...ages);
 
-console.log(ages[0]);
-console.log(ages[9]);
+console.log(ages1);
+console.log(ages2);
 
 // Find the median age(one middle item or two middle items divided by two)
 
+ages.sort(); // [19,19,20,22,24,24,24,25,25,26]
+
+console.log(ages.length); // 10 => it must be 5,6
+
+console.log(ages.slice(4, 6));
+
 // Find the average age(all items divided by number of items)
+
+let avarege =
+  (ages[0] +
+    ages[1] +
+    ages[2] +
+    ages[3] +
+    ages[4] +
+    ages[5] +
+    ages[7] +
+    ages[8] +
+    ages[9] +
+    ages[10]) /
+  10;
+
+console.log(avarege); // 20.2 we can do it with loop, but its next lesson
 
 // Find the range of the ages(max minus min)
 
-// Compare the value of (min - average) and (max - average), use abs() method 1.Slice the first ten countries from the countries array
+console.log(ages2 - ages1);
 
 // Find the middle country(ies) in the countries array
 
+countries.sort;
+
+console.log(countries); // ["Albania","Bolivia","Canada","Denmark","Ethiopia","Finland","Germany","Hungary","Ireland","Japan","Kenya"]
+
+console.log(countries.length); // 11 => the middle is 6
+
+console.log(countries.slice(5, 6)); // ["Finland"]
+
 // Divide the countries array into two equal arrays if it is even. If countries array is not even , one more country for the first half.
+
+let two = countries.length;
+
+if ((two %= 2 == 0)) {
+  let firstHalf = countries.slice(0, countries.length / 2 - 1);
+  let secondHalf = countries.slice(countries.length / 2 - 1, 11);
+
+  console.log(`${firstHalf} and ${secondHalf}`);
+} else {
+  countries.push(`Turkey`);
+  console.log(countries);
+}
