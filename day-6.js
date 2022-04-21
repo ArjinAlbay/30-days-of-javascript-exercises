@@ -1,4 +1,4 @@
-// Loops
+// Exercises: Level 1
 
 let countries = [
   "Albania",
@@ -154,4 +154,119 @@ while (i7 <= 99) {
 
 // Use for loop to iterate from 0 to 100 and print only prime numbers
 
+for (let i = 0; i <= 100; i++) {
+  for (let k = 2; k < i; k++) {
+    if (i % k === 0 && i > 1) {
+      console.log(i);
+    }
+  }
+}
 // Use for loop to iterate from 0 to 100 and print the sum of all numbers.
+
+let sum = 0;
+
+for (let i = 0; i <= 100; i++) {
+  sum += i;
+}
+
+console.log(sum); // 5050
+
+// Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+
+let even = 0;
+let odd = 0;
+
+for (let i = 0; i <= 100; i++) {
+  if (i % 2 == 0) {
+    even += i;
+  } else odd += i;
+}
+
+console.log(`evens sum = ${even} and odds sum = ${odd} `);
+
+// Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
+
+let even1 = 0;
+let odd1 = 0;
+
+for (let i = 0; i <= 100; i++) {
+  if (i % 2 == 0) {
+    even1 += i;
+  } else odd1 += i;
+}
+
+let evenArr = [even1];
+let oddArr = [odd1];
+
+console.log(`evens sum = ${evenArr} and odds sum = ${oddArr} `);
+
+// Develop a small script which generate array of 5 random numbers
+
+let newArr = [];
+
+for (let i = 0; i <= 5; i++) {
+  let r = Math.floor(Math.random() * 100);
+  newArr.push(r);
+}
+
+console.log(newArr);
+
+// Develop a small script which generate array of 5 random numbers and the numbers must be unique
+
+let newArr2 = [];
+
+for (let i = 0; i <= 5; i++) {
+  let r = Math.floor(Math.random() * 100);
+  if (newArr2.indexOf(r) == -1) newArr2.push(r);
+}
+
+console.log(newArr2);
+
+// Develop a small script which generate a six characters random id:
+
+let characters = "abcdefghijklmnopqrstuvwxyz0123456789";
+let sum1 = "";
+
+for (let i = 0; i <= 6; i++) {
+  sum1 += characters.charAt(Math.random() * characters.length);
+}
+
+console.log(sum1);
+
+// Exercises: Level 2
+
+// Develop a small script which generate any number of characters random id:
+
+let characters1 = "abcdefghijklmnopqrsuvwx123456789";
+let r = Math.floor(Math.random() * characters1.length);
+let sum2 = "";
+
+for (let i = 0; i <= r; i++) {
+  sum2 += characters1.charAt(Math.random() * characters1.length);
+}
+
+console.log(sum2);
+
+// Write a script which generates a random rgb color number. ??
+
+let countries1 = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
+];
+
+let newCountries = [];
+
+for (let i = 0; i <= countries1.length - 1; i++) {
+  newCountries += countries1[i];
+}
+
+console.log(newCountries);
